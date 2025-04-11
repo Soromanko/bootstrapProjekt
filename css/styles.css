@@ -11851,4 +11851,10 @@ textarea.form-control-lg {
   }
 }
 
+.card-img-top:hover {
+  opacity: 0.85;
+  transition: opacity 0.3s ease;
+  cursor: pointer;
+}
+
 /*# sourceMappingURL=styles.css.map */

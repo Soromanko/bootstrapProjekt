@@ -46,7 +46,7 @@
     <div class="row">
         <div class="col-md-6 col-lg-4 mb-3">
             <div class="card">
-                <img src="images/proteinVanilla.jpg" alt="protein" class="card-img-top">
+                <img src="images/proteinVanilla.jpg" alt="protein" class="card-img-top" data-bs-toggle="modal" data-bs-target="#productModal">
                 <div class="card-body">
                     <h5 class="card-title">Protein Powder</h5>
                     <p class="card-text">Kvalitní syrovátkový protein pro maximální růst svalů a rychlou regeneraci. Skvělá chuť, vysoký obsah bílkovin a minimální množství cukru. Perfektní volba po tréninku i během dne.</p>
@@ -59,7 +59,7 @@
         </div>
         <div class="col-md-6 col-lg-4 mb-3">
             <div class="card">
-                <img src="https://images.unsplash.com/photo-1693996045435-af7c48b9cafb?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="creatine" class="card-img-top">
+                <img src="https://images.unsplash.com/photo-1693996045435-af7c48b9cafb?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="creatine" class="card-img-top" data-bs-toggle="modal" data-bs-target="#productModal">
                 <div class="card-body">
                     <h5 class="card-title">Creatine</h5>
                     <p class="card-text">Čistý kreatin monohydrát pro zvýšení síly, vytrvalosti a lepší regeneraci. Podporuje hydrataci svalů a napomáhá růstu svalové hmoty. Ideální doplněk pro každého sportovce.</p>
@@ -72,7 +72,7 @@
         </div>
         <div class="col-md-6 col-lg-4 mb-3">
             <div class="card">
-                <img src="images/preworkoutWEBapple.jpg" alt="preworkout" class="card-img-top">
+                <img src="images/preworkoutWEBapple.jpg" alt="preworkout" class="card-img-top" data-bs-toggle="modal" data-bs-target="#productModal">
                 <div class="card-body">
                     <h5 class="card-title">Pre-Workout</h5>
                     <p class="card-text">Silná předtréninkovka s kofeinem a L-citrulinem pro maximální energii, soustředění a výkon v posilovně. Nakopne tě a pomůže ti dostat ze sebe to nejlepší při každém tréninku.</p>
@@ -155,6 +155,52 @@
     Vytvořil: Samuel Švach
 </footer>
 
+<div class="modal" id="productModal">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalTitle">Název produktu</h5>
+                <button TYPE="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <img id="modalImage" class="img-fluid mb-3 rounded" src="" alt="Produkt">
+                <p id="modalDescription">Popis produktu</p>
+                <div class="d-flex justify-content-between align-items-center">
+                    <p id="modalPrice" class="fw-bold mb-0 me-3">Cena</p>
+                    <button class="btn btn-info text-white">
+                        <i class="fa-solid fa-cart-shopping me-1"></i> Přidat do košíku
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 <script src="./js/bootstrap.bundle.min.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        var modal = document.getElementById("productModal");
+        var modalTitle = document.getElementById("modalTitle");
+        var modalImage = document.getElementById("modalImage");
+        var modalDescription = document.getElementById("modalDescription");
+        var modalPrice = document.getElementById("modalPrice");
+
+        document.querySelectorAll(".card-img-top").forEach(function (img) {
+            img.addEventListener("click", function () {
+                var card = img.closest(".card");
+                var title = card.querySelector("h5.card-title").innerText;
+                var description = card.querySelector("p.card-text").innerText;
+                var price = card.querySelector("p.fw-bold").innerText;
+                var imageSrc = img.getAttribute("src");
+
+                modalTitle.innerText = title;
+                modalImage.setAttribute("src", imageSrc);
+                modalImage.setAttribute("alt", title);
+                modalDescription.innerText = description;
+                modalPrice.innerText = price;
+            });
+        });
+    });
+</script>
 </body>
 </html>
