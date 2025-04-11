@@ -179,19 +179,19 @@
 <script src="./js/bootstrap.bundle.min.js"></script>
 <script>
     document.addEventListener("DOMContentLoaded", function () {
-        var modal = document.getElementById("productModal");
-        var modalTitle = document.getElementById("modalTitle");
-        var modalImage = document.getElementById("modalImage");
-        var modalDescription = document.getElementById("modalDescription");
-        var modalPrice = document.getElementById("modalPrice");
+        let modal = document.getElementById("productModal");
+        let modalTitle = document.getElementById("modalTitle");
+        let modalImage = document.getElementById("modalImage");
+        let modalDescription = document.getElementById("modalDescription");
+        let modalPrice = document.getElementById("modalPrice");
 
         document.querySelectorAll(".card-img-top").forEach(function (img) {
             img.addEventListener("click", function () {
-                var card = img.closest(".card");
-                var title = card.querySelector("h5.card-title").innerText;
-                var description = card.querySelector("p.card-text").innerText;
-                var price = card.querySelector("p.fw-bold").innerText;
-                var imageSrc = img.getAttribute("src");
+                let card = img.closest(".card");
+                let title = card.querySelector("h5.card-title").innerText;
+                let description = card.querySelector("p.card-text").innerText;
+                let price = card.querySelector("p.fw-bold").innerText;
+                let imageSrc = img.getAttribute("src");
 
                 modalTitle.innerText = title;
                 modalImage.setAttribute("src", imageSrc);
