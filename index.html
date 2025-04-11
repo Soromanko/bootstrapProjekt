@@ -7,33 +7,36 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>GainGuide</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://kit.fontawesome.com/823e0077fe.js" crossorigin="anonymous"></script>
 </head>
 <body>
-<nav class="navbar navbar-expand-lg bg-light">
+<nav class="navbar navbar-expand-lg bg-dark">
     <div class="container">
-        <a class="navbar-brand" href="index.html">GainGuide</a>
+        <a class="navbar-brand text-warning" href="index.html">
+            <i class="fa-solid fa-dumbbell fa-lg mx-1"></i> GainGuide</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="mainNav">
+        <div class="collapse navbar-collapse text-center" id="mainNav">
             <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a href="index.html" class="nav-link">Hlavní stránka</a></li>
-                <li class="nav-item"><a href="items.html" class="nav-link">Produkty</a></li>
+                <li class="nav-item"><a href="index.html" class="nav-link text-warning">Hlavní stránka</a></li>
+                <li class="nav-item"><a href="items.html" class="nav-link text-warning">Produkty</a></li>
+                <li class="nav-item mx-1"><a href="#" class="nav-link text-warning"><i class="fa-solid fa-cart-shopping fa-lg"></i></a></li>
             </ul>
         </div>
     </div>
 </nav>
 <header class="bg-primary">
     <div class="container text-center py-5 text-white">
-        <h1 class="text-white">GainGuide</h1>
+        <h1><span class="text-warning">Gain</span><span class="text-danger">Guide</span></h1>
         <p class="lead">Váš průvodce světem suplementů</p>
-        <a href="#AboutUs" class="btn btn-lg btn-secondary text-white">O nás</a>
-        <a href="#nabidka" class="btn btn-lg btn-secondary text-white">Nabídka produktů</a>
+        <a href="#AboutUs" class="btn btn-lg btn-secondary">O nás</a>
+        <a href="#nabidka" class="btn btn-lg btn-secondary">Nabídka produktů</a>
     </div>
 </header>
-<section class="bg-primary text-center" id="AboutUs">
-    <div class="text-light">
+<section class="text-center my-3" id="AboutUs">
+    <div>
         <h2>O nás</h2>
         <p>GainGuide vám pomáhá najít ty nejlepší doplňky pro váš trénink. Srovnáváme proteiny, kreatin a předtréninkovky, abyste si vždy vybrali tu správnou variantu. Chcete maximální výkon? My vám ukážeme, co funguje!</p>
     </div>
@@ -43,49 +46,49 @@
     <div class="row">
         <div class="col-md-6 col-lg-4 mb-3">
             <div class="card">
-                <img src="images/proteinVanilla.jpg">
+                <img src="images/proteinVanilla.jpg" alt="protein" class="card-img-top">
                 <div class="card-body">
                     <h5 class="card-title">Protein Powder</h5>
                     <p class="card-text">Kvalitní syrovátkový protein pro maximální růst svalů a rychlou regeneraci. Skvělá chuť, vysoký obsah bílkovin a minimální množství cukru. Perfektní volba po tréninku i během dne.</p>
-                    <p class="fw-bold">Cena: 689Kč</p>
-                    <div class="d-flex justify-content-between">
-                        <a href="#" class="btn btn-primary">Koupit</a>
-                        <a href="items.html#protein" class="btn btn-primary">Zobrazit více</a>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <p class="fw-bold mb-0">Cena: 689Kč</p>
+                        <a href="#" class="btn btn-info text-light">Koupit</a>
                     </div>
                 </div>
             </div>
         </div>
         <div class="col-md-6 col-lg-4 mb-3">
             <div class="card">
-                <img src="https://images.unsplash.com/photo-1693996045435-af7c48b9cafb?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+                <img src="https://images.unsplash.com/photo-1693996045435-af7c48b9cafb?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="creatine" class="card-img-top">
                 <div class="card-body">
                     <h5 class="card-title">Creatine</h5>
                     <p class="card-text">Čistý kreatin monohydrát pro zvýšení síly, vytrvalosti a lepší regeneraci. Podporuje hydrataci svalů a napomáhá růstu svalové hmoty. Ideální doplněk pro každého sportovce.</p>
-                    <p class="fw-bold">Cena: 619Kč</p>
-                    <div class="d-flex justify-content-between">
-                        <a href="#" class="btn btn-primary">Koupit</a>
-                        <a href="items.html#creatine" class="btn btn-primary">Zobrazit více</a>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <p class="fw-bold mb-0">Cena: 619Kč</p>
+                        <a href="#" class="btn btn-info text-light">Koupit</a>
                     </div>
                 </div>
             </div>
         </div>
         <div class="col-md-6 col-lg-4 mb-3">
             <div class="card">
-                <img src="images/preworkoutWEBapple.jpg">
+                <img src="images/preworkoutWEBapple.jpg" alt="preworkout" class="card-img-top">
                 <div class="card-body">
                     <h5 class="card-title">Pre-Workout</h5>
                     <p class="card-text">Silná předtréninkovka s kofeinem a L-citrulinem pro maximální energii, soustředění a výkon v posilovně. Nakopne tě a pomůže ti dostat ze sebe to nejlepší při každém tréninku.</p>
-                    <p class="fw-bold">Cena: 609Kč</p>
-                    <div class="d-flex justify-content-between">
-                        <a href="#" class="btn btn-primary">Koupit</a>
-                        <a href="items.html#preworkout" class="btn btn-primary">Zobrazit více</a>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <p class="fw-bold mb-0">Cena: 609Kč</p>
+                        <a href="#" class="btn btn-info text-light">Koupit</a>
                     </div>
                 </div>
             </div>
         </div>
+        <div class="col-12 d-flex justify-content-center">
+            <a href="items.html" class="btn btn-info mt-4 mb-2 text-light">Zobrazit více</a>
+        </div>
     </div>
 </section>
-<section>
+<section class="mt-4">
     <h2 class="text-center">Kontaktní formulář</h2>
     <form class="container p-4">
         <div class="row mb-3">
@@ -104,11 +107,58 @@
             <textarea class="form-control" id="zpráva" rows="4" placeholder="Napište zprávu..."></textarea>
         </div>
 
-        <button type="submit" class="btn btn-primary">Odeslat</button>
+        <button type="submit" class="btn btn-info text-light">Odeslat</button>
     </form>
 </section>
-<footer class="bg-light text-black text-center py-3">
+<section>
+    <div class="accordion" id="FAQ">
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="ProteinUsage">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                    Kdy je nejlepší čas na užití proteinu?
+                </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="ProteinUsage" data-bs-parent="#FAQ">
+                <div class="accordion-body">
+                    Nejlepší čas pro konzumaci proteinu je ihned po tréninku, kdy tělo nejlépe vstřebává živiny. Skvělou volbou je také protein ke snídani nebo jako svačina během dne pro doplnění denního příjmu bílkovin.
+
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="CreatinePreworkout">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    Mohu kombinovat kreatin s preworkoutem?
+                </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="CreatinePreworkout" data-bs-parent="#FAQ">
+                <div class="accordion-body">
+                    Ano, kreatin a preworkouty lze bezpečně kombinovat. Mnoho sportovců dokonce užívá kreatin právě s preworkoutem, protože společně podporují sílu, výkon i svalovou vytrvalost. Jen si dej pozor na celkový obsah kofeinu.                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="PreworkoutUcinky">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    Jak dlouho trvá, než začnu cítit účinky preworkoutu?
+                </button>
+            </h2>
+            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="PreworkoutUcinky" data-bs-parent="#FAQ">
+                <div class="accordion-body">
+                    Většina preworkoutů začne účinkovat do 20–30 minut po užití. Doporučujeme ho užít přibližně půl hodiny před tréninkem, aby ses dostal/a do maximálního výkonu přesně, když to potřebuješ.                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<footer class="bg-primary text-white text-center py-3">
     Vytvořil: Samuel Švach
 </footer>
+
+<div class="modal">
+    <div class="modal-dialog modal-dialog-centered"></div>
+</div>
+
+<script src="./js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

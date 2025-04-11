@@ -1,0 +1,23 @@
+{
+  "name": "bootstrapprojekt",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Soromanko/bootstrapProjekt.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Soromanko/bootstrapProjekt/issues"
+  },
+  "homepage": "https://github.com/Soromanko/bootstrapProjekt#readme",
+  "dependencies": {
+    "bootstrap": "^5.3.5"
+  }
+}
